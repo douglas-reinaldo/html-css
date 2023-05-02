@@ -1,0 +1,92 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 05</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            padding: 5px 15px 5px 15px;
+            border: 1px solid gray;
+        }
+
+        col.cor1 {
+            background-color: rgb(53, 131, 199);
+        }
+
+        col.cor2 {
+            background-color: rgb(15, 194, 75);
+        }
+
+        col.cor3 {
+            background-color: rgb(204, 207, 21);
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Exercício de Tabela
+    </h1>
+    <table>
+        <colgroup>
+            <col class="cor1" span="2">
+            <col class="cor2">
+            <col class="cor3">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Sexo</th>
+                <th>Profissão</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Guilherme Freitas</td>
+                <td>22</td>
+                <td>Masculino</td>
+                <td>Engenheiro</td>
+            </tr>
+
+            <tr>
+                <td>Fernanda Ramos</td>
+                <td>34</td>
+                <td>Feminino</td>
+                <td>Arquiteta</td>
+            </tr>
+
+            <tr>
+                <td>Livia Santos</td>
+                <td>27</td>
+                <td>Feminino</td>
+                <td>Administradora</td>
+            </tr>
+
+            <tr>
+                <td>Douglas Goulart</td>
+                <td>19</td>
+                <td>Masculino</td>
+                <td>Desenvolvedor</td>
+            </tr>
+
+            <tr>
+                <td>Anakin Skywalker</td>
+                <td>29</td>
+                <td>Masculino</td>
+                <td>Piloto</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
