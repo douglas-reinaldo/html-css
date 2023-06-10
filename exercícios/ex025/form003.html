@@ -1,88 +1,80 @@
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Formulário 03</title>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #110e0d;
+        }
 
         form {
-            padding-top: 35px;
-            text-align: left;
-            padding: 35px;
+            width: 700px;
+            height: 500px;
+            margin: auto;
+            border-radius: 18px 18px;
+            background-color: #272727;
+            border-top: 1px solid #c2bdbd;
         }
 
         form p {
-            padding: 18px;
+            padding-top: 5px;
+            padding-left: 45px;
         }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #202b36;
-            color: rgba(255, 255, 255, 0.753);
-            text-align: center;
+        form {
+            padding: 20px;
+        }
+
+        #inome{
+            width: 600px;
+            height: 40px;
         }
 
         h1 {
-            margin: 70px 0 30px 0;
-            font-family: 'Archivo Black', sans-serif;
-        }
-        section {
-            height: 500px;
-            width: 500px;
-            position: relative;
-            margin: auto;
-            background-color: #44485c;
-            border-radius: 10px;
-            margin-bottom: 50px;
-        }
-
-        #limpar, #enviar {
-            background-color: #202b36;
-            width: 150px;
-            height: 35px;
-            color: #646a85;
-            border-radius: 10px;
-            box-shadow: none;
-        }
-
-        #inome, #imedia, #imes, #idia, #ihora {
-            border-radius: 5px;
-            background-color: #d7ddf7;
-            box-shadow: 0;
+            color: #d4d3d3;
+            text-align: center;
+            margin: 40px;
         }
     </style>
 </head>
 <body>
-    <h1>Teste de forulário</h1>
-    <section>
-        <form action="cadastro.py" method="post" autocomplete="on">
+    <h1>Formulário</h1>
+
+    <div>
+        <form action="cadastro.py" method="get" autocomplete="on">
             <p>
-                <label for="inome">Nome: </label>
-                <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome do usuário" autocomplete="name">
+                <label for="inome"></label>
+                <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome do Usuário" autocomplete="name">
             </p>
+
             <p>
-                <label for="imedia">Média: </label>
-                <input type="number" name="media" id="imedia" min="0" max="10" step="0.1" required>
+                <label for="imedia"></label>
+                <input type="number" name="media" id="imedia" required max="10" min="0" step="0.1" placeholder="Média">
+
+                <label for="imes"></label>
+                <input type="month" name="mes" id="imes" placeholder="Período Letivo">
             </p>
+
             <p>
-                <label for="imes">Período Letivo</label>
-                <input type="month" name="mes" id="imes">
+                <label for="idia"></label>
+                <input type="date" name="dia" id="idia" placeholder="Dia de Prova">
             </p>
+
             <p>
-                <label for="idia">Dia da Prova</label>
-                <input type="date" name="dia" id="idia">
+                <label for="ihora"></label>
+                <input type="time" name="hora" id="ihora" placeholder="Horário da Prova">
             </p>
+
             <p>
-                <label for="ihora">Hora da Prova</label>
-                <input type="time" name="hora" id="ihora">
-            </p>
-            <p>
-                <input type="reset" value="Limpar" id="limpar">
-                <input type="submit" value="Enviar" id="enviar">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
             </p>
         </form>
-    </section>
+    </div>
 </body>
 </html>
