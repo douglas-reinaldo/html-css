@@ -1,0 +1,160 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <style>
+        body {
+            background-image: linear-gradient(to bottom right, #148fd5, #0c2c3b);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            width: 310px;
+            height: 485px;
+            background-color: #082b40;
+            border-radius: 14px;
+            margin: auto;
+            padding: 12px;
+            color: #b8c0bf;
+            margin-top: 50px;
+        }
+
+        form fieldset {
+            border-color: #3a8ed7;
+            height: 465;
+        }
+
+        form fieldset legend {
+            background-color: #1891ff;
+            border-radius: 3px;
+            text-align: center;
+            color: white;
+            padding: 5px;
+        }
+
+        #inome, #iemail, #itel, #icidade, #iestado, #iendereco {
+            width: 275px;
+            background-color: #082b40;
+            box-shadow: none;
+            color: #dcdddb;
+            border-top: none;
+            border-left: none; 
+            border-right: none ;
+            border-bottom: 1px solid #718a9a;
+            margin-bottom: 5px;
+        }
+
+        #idata {
+            background-color: #dcdddb;
+            padding-bottom: 5px;
+            border: 0;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        #inome, #iemail, #itel, #icidade, #iestado, #iendereco, #enviar ::after {
+            outline: 0;
+            box-shadow: none;
+            color: #dcdddb;
+            border-top: none;
+            border-left: none; 
+            border-right: none ;
+            border-bottom: 1px solid #718a9a;
+        }
+
+        #enviar {
+            width: 275px;
+            height: 35px;
+            border-radius: 5px;
+            background-image: linear-gradient(to bottom right, #0b4481, #451899);
+            border: none;
+            color: #dcdddb;
+            position: absolute;
+        }
+
+        p#sexo {
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        input::placeholder {
+            color: #a7a2b0;
+        }
+
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus,
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus {
+        border: 1px solid white;
+        -webkit-text-fill-color: #dcdddb !important;
+        -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+        transition: background-color 5000s ease-in-out 0s;
+}
+
+    </style>
+</head>
+<body>
+    <form action="cadastro.py" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Formulário de Clientes</legend>
+
+            <p>
+                <label for="inome"></label>
+                <input type="text" name="nome" id="inome" placeholder="Nome completo" autocomplete="name" required>
+            </p>
+
+            <p>
+                <label for="iemail"></label>
+                <input type="email" name="email" id="iemail" placeholder="Email" autocomplete="email" required>
+            </p>
+
+            <p>
+                <label for="itel"></label>
+                <input type="tel" name="tel" id="itel" placeholder="Telefone" pattern="\(\d{2}\)\d{4,5}-\d{4}" required placeholder="(xx)xxxx-xxxx">
+            </p>
+
+            <p>
+                <label for="isexo">Sexo:</label><br>
+                <p id="sexo">
+                    <input type="radio" name="sexo" id="isexo" required> Masculino <br>
+                    <input type="radio" name="sexo" id="isexo" required> Feminino <br>
+                    <input type="radio" name="sexo" id="isexo" required> Outro <br>
+                </p>
+            </p>
+
+            <p>
+                <label for="idata">Data de Nascimento: </label>
+                <input type="date" name="data" id="idata" required>
+            </p>
+
+            <p>
+                <label for="icidade"></label>
+                <input type="text" name="cidade" id="icidade" placeholder="Cidade" required>
+            </p>
+
+            <p>
+                <label for="iestado"></label>
+                <input type="text" name="estado" id="iestado" placeholder="Estado" required>
+            </p>
+
+            <p>
+                <label for="iendereco"></label>
+                <input type="text" name="endereco" id="iendereco" placeholder="Endereço" required>
+            </p>
+
+            <p>
+                <input type="submit" value="Enviar" id="enviar">
+            </p>
+
+        </fieldset>
+    </form>
+</body>
+</html>
